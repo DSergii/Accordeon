@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>index</title>
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/all.css" media="all" />
+		
+	</head>
+	<body>
+
+		<div id="container">
+			<div class="panel active">
+				<span class="title" onclick="openBox(this)">Основы языка и как на нем говорить правильно 
+					<i class="fa fa-caret-down">&nbsp;</i>
+					<i class="fa fa-caret-up">&nbsp;</i>
+				</span>
+				<div class="box">
+					<ul class="list">
+						<li>Лексическая структура</li>
+						<li>Типы данных, значения и переменные</li>
+						<li>Выражения и операторы инструкции</li>
+					</ul>
+				</div>
+			</div>
+			<div class="panel">
+				<span class="title" onclick="openBox(this)">Функции
+					<i class="fa fa-caret-down">&nbsp;</i>
+					<i class="fa fa-caret-up">&nbsp;</i>
+				</span>
+				<div class="box">
+					<ul class="list">
+						<li>Лексическая структура</li>
+						<li>Типы данных, значения и переменные</li>
+						<li>Выражения и операторы инструкции</li>
+					</ul>
+				</div>
+			</div>
+			<div class="panel">
+				<span class="title" onclick="openBox(this)">Обработка ошибок и отладка 
+					<i class="fa fa-caret-down">&nbsp;</i>
+					<i class="fa fa-caret-up">&nbsp;</i>
+				</span>
+				<div class="box">
+					<ul class="list">
+						<li>Лексическая структура</li>
+						<li>Типы данных, значения и переменные</li>
+						<li>Выражения и операторы инструкции</li>
+					</ul>
+				</div>
+			</div>
+			<div class="panel">
+				<span class="title" onclick="openBox(this)">Объекты и массивы
+					<i class="fa fa-caret-down">&nbsp;</i>
+					<i class="fa fa-caret-up">&nbsp;</i>
+				</span>
+				<div class="box">
+					<ul class="list">
+						<li>Объекты</li>
+						<li>Массивы</li>
+						<li>Объекты и массивы</li>
+					</ul>
+				</div>
+			</div>
+			<div class="panel">
+				<span class="title" onclick="openBox(this)">События 
+					<i class="fa fa-caret-down">&nbsp;</i>
+					<i class="fa fa-caret-up">&nbsp;</i>
+				</span>
+				<div class="box">
+					<ul class="list">
+						<li>События мыши</li>
+						<li>События клавиатуры</li>
+						<li>События браузера</li>
+						<li>События документа</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function openBox(element) {
+				var flag = false;
+
+				if(element.parentNode.className.indexOf('active') > 0){
+					flag = true;
+				}
+				var el = document.getElementsByClassName('panel');
+
+				for (var i = el.length - 1; i >= 0; i--) {
+					el[i].classList.remove('active');
+				};
+
+				if(flag){
+					element.parentNode.classList.remove('active');
+				}else{
+					element.parentNode.classList.add('active');
+				}
+			}
+		</script>
+	</body>
+</html>
